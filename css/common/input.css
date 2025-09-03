@@ -1,0 +1,212 @@
+/* 체크박스 및 라디오 색 - primary: orange */
+:root {
+    --checkbox-radio-bg : #E98417;
+    --checkbox-radio-border : #E98417;
+    --checkbox-radio-checked-label: #AE6300;
+    --checkbox-text-color: #222222;
+}
+
+/* 웹 표준 및 웹 접근성 준수: label for , input id 필수 */
+/* 대안 1) 기존 소스에서 구조 변경 안할 시 */
+/* 
+<span>
+  <input 
+    id={name} 
+    name={name} 
+    checked={checked} 
+    type="radio" 
+    value={value} 
+    readOnly={readOnly}
+    onChange={radioChangeHandler({ name, onChange })}
+  />
+  <label htmlFor={name}>{label}</label>
+</span>
+*/
+
+/* 대안 2) 기존 소스에서 구조 변경 시 - 감싸는 span -> label 로 변경 */
+/* 
+<label>
+  <input 
+    name={name} 
+    checked={checked} 
+    type="radio" 
+    value={value} 
+    readOnly={readOnly}
+    onChange={radioChangeHandler({ name, onChange })}
+  />
+  {label}
+</label> 
+*/
+
+/* 체크박스 */
+label.checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+ 
+    input[type="checkbox"] {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+
+        /* 체크 */
+        &:checked {
+            ~ .checkbox-icon {
+                background-color: var(--checkbox-text-color);
+                border-color: var(---checkbox-text-color);
+
+                svg {
+                    display: block;
+                }
+            }
+
+            ~ .checkbox-label{
+                color: var(--checkbox-text-color);
+            }
+        }
+
+        /* 접근성 */
+        &:focus-visible {
+            ~ .checkbox-icon {
+                outline: 1px solid black;
+            }
+        }
+
+        /* 비활성화 */
+        &:disabled {
+            ~ .checkbox-icon{
+                background-color: #F2F2F2;
+                cursor: default;
+            }
+
+            ~ .checkbox-label{
+                color: #A3A3A3;
+            }
+        }
+    }
+ 
+    .checkbox-icon {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #D3D3D3;
+        border-radius: 4px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            display: none;
+        }
+    }
+
+    .checkbox-label {
+        margin-left: 6px;
+        font-size: 14px;
+        color: var(--checkbox-text-color);
+    } 
+
+    /* 주황색 */
+    &.primary {
+        input[type="checkbox"] {
+            /* 체크 */
+            &:checked {
+                ~ .checkbox-icon {
+                    background-color: var(--checkbox-radio-bg);
+                    border-color: var(--checkbox-radio-border);
+                }
+            }
+        }
+
+        /* 반전 */
+        &.inverse {
+            input[type="checkbox"] {
+                /* 체크 */
+                &:checked {
+                    ~ .checkbox-icon {
+                        background-color: #fff;
+                        border-color: #D3D3D3;
+
+                        svg path {
+                            stroke: var(--checkbox-radio-bg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 체크박스 여러 개 있을 때 - 기존 소스 참고 Checkboxes */
+
+/* 라디오 셋트 */
+.radio-set {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 라디오 */
+label.radio {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	width: fit-content;
+    position: relative;
+
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 0;
+        transition: none;
+
+        /* 체크 */
+        &:checked {
+            background-color: var(--checkbox-text-color);
+            box-shadow: inset 0 0 0 2.5px white;
+            border-width: 1.5px;
+            border-color: var(--checkbox-text-color);
+        }
+
+        /* 접근성 */
+        &:focus-visible {
+            outline: 1px solid black;
+        } 
+    }
+
+    .radio-label {
+        display: inline-block;
+        padding-left: 8px;
+        color: var(--checkbox-text-color);
+        line-height: 1;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: "Pretendard"
+    }
+
+    /* 주황색 */
+    &.primary {
+        input[type="radio"] {
+            /* 체크 */
+            &:checked {
+                background-color: var(--checkbox-radio-bg);
+                border-color: var(--checkbox-radio-border);
+            }
+        }
+    }
+} 
+
+/* 셀렉트박스 ? 기존 commonui-react는 Input 이랑 같은 파일에 작성되어 있음 */
+/* 아직 스타일 가이드 없음.. */

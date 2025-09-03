@@ -1,0 +1,128 @@
+/* 초기화 */
+:root {
+    --body-main-text-color: #222222;
+    --body-main-font: 'Pretendard'
+}
+
+body {
+    padding: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    font: 400 16px/1 'Pretendard';
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.reset-list, .reset-list li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* span{
+	display: inline-block;
+    font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+} */
+
+/* ol, ul, li{
+    list-style: none;
+    color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+    font-family: inherit;
+} */
+
+/* a{
+    text-decoration: none;
+    color: inherit;
+	display: inline-block;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+span,div,p{
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	color: inherit;
+}
+
+b{
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	color: inherit;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer; 
+} */
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 30px;
+
+    span {
+        margin-left: 5px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 65px;
+
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #444;
+    }
+
+    .content-area {
+        display: inline-flex;
+        gap: 35px;
+
+        .group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+    }
+}
+
+/* flex */
+.flex-box {
+    width: 70px;
+    height: 70px;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}

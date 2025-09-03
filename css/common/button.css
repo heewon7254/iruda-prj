@@ -1,0 +1,160 @@
+/* primary - bg:orange */
+/* 기존 소스에서는 아이콘 있을 때 material-icon <i>로 렌더링 */
+/* 4.3 에서는 추가된 아이콘은 material-icon 활용 X */
+/* icon 이 문자열이면 <i>로, 컴포넌트면 직접 렌더링하도록 수정 필요해 보임 */
+
+/* color 로 넘겼을 시 path, stroke 어떤 걸 편집할지 모름 => 이벤트 시 아이콘 스타일 변경하는 경우 아직은 없음
+ if (React.isValidElement(icon)) {
+    // icon이 React 컴포넌트(SVG 등)일 경우 직접 렌더링
+    return React.cloneElement(icon, {
+        className,
+        style: { fontSize: `${size}px`, transform: `rotate(${rotate}deg)`, color, ...style },
+        onClick, 
+        ...rest, 
+    });
+}
+*/
+
+/* svg */
+/* 
+const CustomIcon = () => {
+	return (
+		<svg
+			width="10"
+			height="10"
+			viewBox="0 0 10 10"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M10 9.13928L5.86095 5.00196L10 0.856555L9.14309 0L5.00404 4.1454L0.856912 0L0 0.856555L4.14713 5.00196L0 9.13928L0.856912 9.99584L5.00404 5.85851L9.14309 9.99584L10 9.13928Z"
+				fill="#222222"
+			/>
+		</svg>
+	);
+};
+
+export default CustomIcon; 
+*/
+
+
+/* 하지만 4.3에서 아이콘이 있는 버튼이 아직 "글쓰기" 버튼만 있으므로 위의 방법이 굳이 필요한 지는 모르겠음 */
+
+/* 버튼 색상 */
+:root {
+    /* orange */
+    /* primary */
+    --cu-primary-button-bg: #F57F00;
+    --cu-primary-button-border: #C86800;
+    --cu-primary-button-bg-hover: #E07400;
+    --cu-primary-button-border-hover: #B05B00;
+    --cu-primary-text: #FFFFFF;
+
+    /* secondary */
+    /* tertiary 로 해야되나.. */
+    --cu-secondary-button-bg: #FFFFFF;
+    --cu-secondary-button-bg-hover: #F4F4F4;
+    --cu-secondary-button-border: #D7D7D7;
+    --cu-secondary-button-border-hover: #222222;
+    --cu-secondary-text: #222222;
+
+    /* blue - 미정 */
+
+    /* disabled */
+    
+}
+
+/* 기존 쓰고 있던 클래스명(ui-button)과 혼동 가능성
+cu-button 클래스명 변경 or 쓰고 있던 클래스명에서 css 수정 */
+
+/* index.scss 836 line 이미 추가되어 있음 - 커뮤니티 작업 시 진행 */
+/* 버튼 초기화 */
+.ui-btn {
+    border: none;
+    outline: none;
+	border-radius: 4px;
+	text-align: center;
+	transition: 0.1s;
+	white-space: nowrap;
+	cursor: pointer;
+    /* 추가 */
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	&.btn-sm {
+		min-width: 51px;
+		padding: 0px 8px;
+		font-size: 13px;
+		font-weight: 400;
+		height: 26px;
+		line-height: 26px;
+        gap: 4px;
+	}
+ 
+	&.btn-m { 
+		min-width:  55px;
+		padding: 0px 10px;
+		font-size: 14px;
+		font-weight: 400;
+		height: 30px; 
+		line-height : 30px;
+        gap: 5px;
+	}
+
+	&.btn-lg {
+		min-width: 61px;
+		padding: 0px 10px;
+		font-size: 14px;
+		font-weight: 400;
+		height: 32px;
+		line-height: 32px;
+		gap: 5px;
+	}
+
+    /* 접근성 */
+    &:focus-visible {
+        outline: 1px solid black;
+    }
+
+    /* primary - bg:orange, textColor:white */
+    &.primary {
+        background-color: var(--cu-primary-button-bg);
+        border-color: var(--cu-primary-button-border);
+        color: var(--cu-primary-text);
+
+        &:hover {
+            background-color: var(--cu-primary-button-bg-hover);
+            border-color: var(--cu-primary-button-border-hover);
+        }
+    }
+
+    /* secondary - bg:white, border:gray */
+    /* 기존 tertiary 버튼과 비슷함 */
+    /* 기존 secondary - border:orange, textColor: orange v4.3 에는 없음 */
+    &.secondary {
+        background-color: var(--cu-secondary-button-bg);
+        border-color: var(--cu-secondary-button-border);
+        color: var(--cu-secondary-text);
+ 
+        &:hover {
+            background-color: var(--cu-secondary-button-bg-hover);
+            border-color: var(--cu-secondary-button-border-hover);
+        }
+    }
+
+    /* 비활성 */ 
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        border-color: #D7D7D7;
+        color: #A3A3A3;
+        background-color: #F2F2F2;
+    }
+
+    /* blue 미정 */
+    &.blue {
+        --cu-primary-button-bg: blue;
+    }
+}

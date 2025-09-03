@@ -1,0 +1,55 @@
+/* flex 요소 배치 */
+/* commonui-react > sass > default > _default.scss 일부 추가되어 있음 */
+.flex-container:not([style*="display: none"]) {
+	display: flex !important;
+	flex-direction: column;
+
+	&.dir-row {
+		flex-direction: row;
+	}
+	&.dir-col {
+		flex-direction: column;
+	}
+}
+.flex-none {
+	flex: none;
+}
+.flex-auto {
+	flex: 1 1 0px;
+	overflow: auto;
+}
+.flex-grow {
+	flex: 1 0 auto;
+}
+.flex-shrink {
+	flex: 1 0 auto;
+}
+.flex-1_5 {
+	flex: 1.5;
+}
+.flex-1 {
+	flex: 1;
+}
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .flex-start {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+	.flex-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+    .flex-end {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

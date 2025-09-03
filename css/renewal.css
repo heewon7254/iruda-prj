@@ -1,0 +1,326 @@
+/* 서브페이지 공통 */
+
+/* 페이지 */
+.page {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	gap: 5px;
+	padding-top: 14px;
+	padding-bottom: 5px;
+
+	& a{
+		width: 26px;
+		height: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		font-size: 13px;
+        color: var(--text-color);
+
+		/* 처음, 이전, 다음, 마지막 버튼 */
+		&.first,
+		&.prev,
+		&.next,
+		&.last {
+			border: 1px solid #E0E4EC;
+			border-radius: 3px;
+			&:hover{
+				background-color: #F4F4F4;
+			}
+		}
+		/* 일반 페이지 버튼 호버 */
+        &:not(.first, .prev, .next, .last):hover {
+            background-color: #F4F4F4;
+        }
+		/* 페이지 버튼 아이콘 */
+		&.first,
+		&.last {
+			background: url(../img/pagination/first_page_arrow.svg) center/9px no-repeat;
+		}
+		&.last {
+			transform: rotate(180deg);
+		}
+		&.prev,
+		&.next {
+			background: url(../img/pagination/prev_page_arrow.svg) center/6px no-repeat;
+		}
+		&.next {
+			transform: rotate(180deg);
+		}
+		/* 활성화된 페이지 */
+		&.active{
+			color: white;
+			background-color: #1F2020;
+			border-color: #000000;
+
+            &:hover {
+                background-color: #717171;
+                border-color: #5B5B5B;
+                color: white;
+            }
+		}
+	}
+}
+
+/* col_table table */
+.col_table { 
+	border-collapse: collapse;
+    border-spacing: 0;
+	width: 100%;
+
+    tr {
+        border-bottom: 1px solid #DDDDDD;
+
+        &:first-child {
+            border-top: 1px solid #DDDDDD;
+        }
+
+        th{
+            background-color: #F5F6F8;
+            width: 172px;
+            font-size: 15px;
+            text-align: left;
+            padding: 11px 20px;
+        }
+        td{
+            padding: 3px 12px;
+            min-height: 40px;
+            font-weight: 300;
+
+            textarea{
+                margin-top: 3px;
+            }
+
+            input {
+                border: 1px solid #DDDDDD;
+                border-radius: 4px;
+                height: 28px;
+                font-size: 14px;
+                padding: 0 12px;
+            }
+        }
+    }
+}
+
+/* row_table */
+.row_table {
+	width: 100%;
+	border-spacing: 0;
+
+    * {
+        font-family: inherit;
+    }
+
+    tr {
+        border-bottom: 1px solid #eeeeee;
+
+        th {
+            background-color: #f5f6f8;
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 400;
+            border-top: 1px solid #EEEEEE;
+            border-right: 1px solid #EEEEEE;
+            min-height: 40px;
+
+            &::last-child{
+                border-right: none;
+            }
+        }
+        
+        td {
+            padding: 7px 14px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-color);
+            border-right: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+            min-height: 40px;
+
+            &::last-child{
+                border-right: none;
+            }
+        }
+    }
+}
+
+/* 버튼 */
+.ui-btn {
+	border-radius: 4px;
+	text-align: center;
+	transition: 0.1s;
+}
+.ui-btn.primary { 
+	background-color: #F57F00;
+	color: white;
+	border: 1px solid #B05B00;	
+}
+.ui-btn.primary:hover {
+	background-color: #E07400;
+	border-color: #B05B00;
+}
+.ui-btn.secondary {
+	background-color: white;
+	color: #222222;
+	border: 1px solid #D7D7D7;
+}
+.ui-btn.secondary:hover {
+	background-color: #F4F4F4;
+	border-color: #222222;
+}
+
+/* 높이 */
+.ui-btn.btn-h-32 {
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	min-width: 61px;
+	padding: 0 10px;
+}
+.ui-btn.btn-h-30 {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 8px;
+}
+/* 글쓰기버튼 */
+.ui-btn.write {
+	position: relative;
+	padding-left: 27px;
+}
+.ui-btn.write::before {
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: 53%;
+	transform: translateY(-50%);
+	background: url(../img/pencil_icon.svg) center/cover no-repeat;
+	width: 11px;
+	height: 11px;
+}
+
+
+
+/* 커뮤니티 레이아웃 */
+.community-section {
+    margin: 0 14px;
+
+    /* 제목 */
+    .title_area {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 32px 0 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 분류 */
+    .ctg_area {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        & .set {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: 300;
+            font-size: 14px;
+            color: #222222;
+            padding-bottom: 30px;
+
+            & .cnt {
+                font-weight: 600;
+                padding: 0 8px;
+                height: 22px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+            }
+
+            &.total {
+                & .txt{
+                    font-weight: 600;
+                }
+                & .cnt {
+                    border: 1px solid #393939;
+                    background: #484848;
+                    color: #FFFFFF;
+                }
+            }
+
+            &.complete {
+                & .cnt{
+                    border: 1px solid #BEDFFB;
+                    background: #DCF0FF;
+                    color: #0F56B3;
+                }
+            }
+            
+            &.wait {
+                & .cnt{
+                    border: 1px solid #E9D7FE;
+                    background: #EBDEFF;
+                    color:  #6D46C8;
+                }
+            }
+        }
+    }
+
+    /* 검색조건 */
+    .search_result_area {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        align-items: end;
+        position: relative;
+
+         & .total_cnt {
+            font-size: 18px;
+            font-weight: 500;
+
+            & span{
+                font-weight: 300;
+                padding-left: 2px;
+
+                & em{
+                    color: #FF7A06;
+                    padding: 0 2px;
+                    font-weight: 400;
+                    font-style: inherit;
+                    font-size: inherit;
+                }
+            }
+        }
+
+        & .search_option{
+            display: flex;
+            gap: 8px;
+            position: relative;
+    
+            & select{
+                height: 36px;
+                border-radius: 8px;
+            }
+
+            & input{
+                height: 36px;
+                border-radius: 8px;
+            }
+
+            & .search_button{
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

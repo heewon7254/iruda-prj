@@ -1,0 +1,103 @@
+/* col_table table */
+.col_table { 
+	border-collapse: collapse;
+    border-spacing: 0;
+	width: 100%;
+
+    caption {
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+        text-indent: -9999999em;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    tr {
+        border-bottom: 1px solid #DDDDDD;
+
+        &:first-child {
+            border-top: 1px solid #DDDDDD;
+        }
+
+        th {
+            background-color: #F5F6F8;
+            width: 172px;
+            font-size: 15px;
+            text-align: left;
+            padding: 11px 20px;
+        }
+
+        td {
+            padding: 3px 12px;
+            height: 40px;
+            font-weight: 300;
+
+            textarea {
+                margin-top: 3px;
+            }
+
+            input {
+                border: 1px solid #DDDDDD;
+                border-radius: 4px;
+                height: 28px;
+                font-size: 14px;
+                padding: 0 12px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* row_table */
+.row_table {
+	width: 100%;
+	border-spacing: 0;
+
+    caption {
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+        text-indent: -9999999em;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    * {
+        font-family: inherit;
+    }
+
+    tr {
+        border-bottom: 1px solid #eeeeee;
+
+        th {
+            background-color: #f5f6f8;
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 400;
+            border-top: 1px solid #EEEEEE;
+            border-right: 1px solid #EEEEEE;
+            height: 40px;
+
+            &::last-child {
+                border-right: none;
+            }
+        }
+        
+        td {
+            padding: 7px 14px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-color);
+            border-right: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+            height: 40px;
+
+            &::last-child {
+                border-right: none;
+            }
+        }
+    }
+}
