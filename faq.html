@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>IRUDA</title>
+        <title>커뮤니티 목록</title>
         <!-- 기존 css -->
-        <link rel="stylesheet" href="../../css/index.css" />
+        <link rel="stylesheet" href="css/index.css" />
         <style>
             .rc-tree {
                 margin: 0;
@@ -234,10 +234,10 @@
         </style>
         <style type="text/css">
             /**
-        * Snippets from animate.css
-        * Credit goes to https://github.com/daneden
-        * github.com/daneden/animate.css
-        */
+    * Snippets from animate.css
+    * Credit goes to https://github.com/daneden
+    * github.com/daneden/animate.css
+    */
             .rsw_1z {
                 -webkit-animation-duration: 0.8192s;
                 animation-duration: 0.8192s;
@@ -875,10 +875,9 @@
                 inset: 0;
                 box-sizing: border-box;
                 grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
-                grid-template-rows: minmax(min-content, auto) minmax(
-                        min-content,
-                        auto
-                    ) minmax(min-content, auto);
+                grid-template-rows:
+                    minmax(min-content, auto) minmax(min-content, auto)
+                    minmax(min-content, auto);
                 height: 100%;
                 padding: 0.625em;
                 overflow-x: hidden;
@@ -1866,14 +1865,17 @@
         </style>
         <!-- 추가 css -->
         <!-- 공통 -->
-        <link rel="stylesheet" href="../../css/common.css" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <!-- 커뮤니티 css -->
+        <link rel="stylesheet" href="css/community/community.css" />
         <!-- 추가 js -->
         <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"
         ></script>
-        <script src="../../js/common.js"></script>
+        <script src="js/common.js"></script>
         <!-- Montserrat 폰트 추가 -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1883,10 +1885,6 @@
         />
     </head>
     <body>
-        <div class="skip-nav">
-            <a href="#contents">본문영역 바로가기</a>
-        </div>
-        <!-- 헤더 -->
         <div role="banner" class="iruda-header">
             <div class="container">
                 <!-- 제품 드롭다운 -->
@@ -2114,6 +2112,7 @@
                 </div>
             </div>
         </div>
+        <!-- 컨텐츠 -->
         <div class="layout">
             <!-- 사이드메뉴 -->
             <div class="sidemenu-wrapper">
@@ -2657,8 +2656,278 @@
                     </div>
                 </div>
             </div>
-            <!-- 컨텐츠 -->
-            <div class="content-wrapper"></div>
+            <div class="content-wrapper">
+                <div class="community-section">
+                    <div class="location">
+                        <span class="home"></span>
+                        <span>커뮤니티</span>
+                        <span>Q&A</span>
+                    </div>
+                    <div class="community-content">
+                        <!-- 제목 및 버튼-->
+                        <div class="title-group">
+                            <h1 class="title">FAQ</h1>
+                            <p class="sub-title">
+                                자주 질문해주시는 내용을 모아 보다 편리하게
+                                궁금증을 알아볼 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="sub_tab_wrap mb_20">
+                            <!-- class="on" 추가 시 활성화 -->
+                            <a href="javascript:void(0)" class="on">전체</a>
+                            <a href="javascript:void(0)">기타</a>
+                        </div>
+                        <div class="search_result_area">
+                            <div class="total_cnt">
+                                전체<span>총<em>1,005</em>건</span>
+                            </div>
+                        </div>
+                        <div class="faq_wrap">
+                            <div class="item on">
+                                <div class="ques">
+                                    <span class="num">1</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">2</span>
+                                    <p>
+                                        <span class="ctg">[기타]</span>
+                                        공공데이터 활용 아이디어 공모전 결과
+                                        발표날짜가 궁금합니다
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">3</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">4</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">5</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">6</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">7</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ques">
+                                    <span class="num">8</span>
+                                    <p>
+                                        [기타] 이루다 포털에 호환되는 브라우저는
+                                    </p>
+                                    <div class="button-group">
+                                        <button class="ui-btn secondary btn-sm">
+                                            수정
+                                        </button>
+                                        <button class="ui-btn secondary btn-sm">
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        한국철도공사 포털은 크롬 최신버전에서
+                                        가장 잘 동작합니다.<br />그밖에 엣지,
+                                        사파리, firefox, 웨일 등 다양한
+                                        브라우저를 지원합니다.<br />Internet
+                                        Explorer는 지원하지 않습니다.<br />
+                                        한국철도공사 포털에 호환되는 브라우저를
+                                        사용해주세요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-controls">
+                            <!-- <div class="flex-start"></div> -->
+                            <div class="flex-end">
+                                <button class="ui-btn btn-lg primary">
+                                    <!-- 아이콘 있을 시 span="icon" 추가 -->
+                                    <svg
+                                        width="13"
+                                        height="13"
+                                        viewBox="0 0 13 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 12L4.15814 10.7853C4.36014 10.7076 4.46114 10.6688 4.55563 10.6181C4.63957 10.573 4.71958 10.521 4.79484 10.4626C4.87957 10.3969 4.95609 10.3203 5.10913 10.1673L11.5285 3.74791C12.1572 3.11929 12.1572 2.10009 11.5285 1.47147C10.8999 0.842845 9.88072 0.842844 9.2521 1.47146L2.83269 7.89087C2.67966 8.0439 2.60314 8.12042 2.53739 8.20515C2.47899 8.28041 2.42699 8.36043 2.38193 8.44436C2.33121 8.53886 2.29236 8.63986 2.21467 8.84186L1 12ZM1 12L2.1713 8.95467C2.25511 8.73675 2.29702 8.62779 2.3689 8.57787C2.43172 8.53426 2.50945 8.51776 2.58457 8.53211C2.67053 8.54852 2.75307 8.63107 2.91817 8.79617L4.20384 10.0818C4.36894 10.2469 4.45149 10.3295 4.4679 10.4154C4.48225 10.4906 4.46575 10.5683 4.42214 10.6311C4.37223 10.703 4.26327 10.7449 4.04534 10.8287L1 12Z"
+                                            stroke="white"
+                                            stroke-width="1.2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path></svg
+                                    >글쓰기
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

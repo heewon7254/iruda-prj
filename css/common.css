@@ -5,23 +5,29 @@
 
 * {
     margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-size: 15px; 
-	color: var(--text-color);
-	font-weight: 400;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 400;
     font-family: var(--ds-font-family-1);
-	line-height: 1;
+    line-height: 1;
 }
 
-/* button{
+button {
     background: none;
     border: none;
     cursor: pointer;
-} */
+}
 
-h1,h2,h3,h4,h5,
-div, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p,
+span {
     margin: 0;
     padding: 0;
     font-size: inherit;
@@ -45,12 +51,12 @@ body {
 
 /* 폰트 적용 */
 .mont {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
 }
 
 /* 접근성 */
-.sr-only{
-	display: inline-block;
+.sr-only {
+    display: inline-block;
     width: 0px;
     height: 0px;
     text-indent: -9999999em;
@@ -58,7 +64,8 @@ body {
     position: absolute;
 }
 
-a:focus-visible, button:focus-visible {
+a:focus-visible,
+button:focus-visible {
     outline: 1px solid black;
 }
 
@@ -74,28 +81,28 @@ a:focus-visible, button:focus-visible {
     font-size: 0;
 }
 
-.skip-nav a{ 
-	display: block; 
-	text-align: center; 
-	width: 100%; 
-	line-height: 0; 
-	font-size: 0; 
+.skip-nav a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
 }
 
 .skip-nav a:focus,
 .skip-nav a:hover,
-.skip-nav a:active{
-	position: absolute;
+.skip-nav a:active {
+    position: absolute;
     left: 0;
-	top: 0px;
-	padding: 8px 0;
-	display: block;
-	height: 30px;
-	background: #fff;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 18px;
-	color: var(--text-color);
+    top: 0px;
+    padding: 8px 0;
+    display: block;
+    height: 30px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--text-color);
 }
 
 /* 이루다 탑 메뉴 */
@@ -103,7 +110,7 @@ a:focus-visible, button:focus-visible {
     height: 50px;
     background-color: #303034;
     padding: 0 26px;
-    
+
     .container {
         display: flex;
         align-items: center;
@@ -137,7 +144,7 @@ a:focus-visible, button:focus-visible {
                 }
             }
         }
- 
+
         /* 우측 메뉴 */
         .utils-area {
             flex: 1;
@@ -148,7 +155,7 @@ a:focus-visible, button:focus-visible {
 
             .link {
                 .title {
-                    color: #9F9F9F;
+                    color: #9f9f9f;
                 }
                 &:hover {
                     .title {
@@ -164,7 +171,7 @@ a:focus-visible, button:focus-visible {
                     outline: 1px solid red;
                 }
             }
-            
+
             /* 드롭다운 */
             .dropdown {
                 display: flex;
@@ -172,7 +179,7 @@ a:focus-visible, button:focus-visible {
                 font-size: 13px;
                 font-weight: 500;
 
-                .arrow { 
+                .arrow {
                     font-size: 0;
                     margin-left: 4px;
                 }
@@ -182,9 +189,9 @@ a:focus-visible, button:focus-visible {
             .alarm {
                 position: relative;
 
-                .cnt{
+                .cnt {
                     position: absolute;
-                    background-color: #FB5147;
+                    background-color: #fb5147;
                     color: #fff;
                     font-size: 10px;
                     font-weight: 600;
@@ -202,23 +209,23 @@ a:focus-visible, button:focus-visible {
                 &.zero {
                     .cnt {
                         display: none;
-                   }
-                   
-                   &:hover {
+                    }
+
+                    &:hover {
                         .arrow svg path {
-                            stroke: #9F9F9F;
+                            stroke: #9f9f9f;
                         }
-                   }
+                    }
                 }
             }
 
             /* 언어 */
             .lang {
                 position: relative;
-                
+
                 .hidden-menu {
                     position: absolute;
-                    top: calc(100% + 2px);  
+                    top: calc(100% + 2px);
                     left: -7px;
 
                     height: 0;
@@ -227,15 +234,15 @@ a:focus-visible, button:focus-visible {
 
                     /* 추후 수정해야 될수도 있음 */
                     z-index: 10;
-                    
+
                     .list {
                         background-color: #fff;
-                        border: 1px solid #D9D9D9;
+                        border: 1px solid #d9d9d9;
                         border-radius: 6px;
-                        box-shadow: 5px 5px 7px 0px #0000000F;
+                        box-shadow: 5px 5px 7px 0px #0000000f;
                         padding: 8px 5px 15px 5px;
                         min-width: 94px;
-                        box-shadow: 5px 5px 7px 0px #0000000F;
+                        box-shadow: 5px 5px 7px 0px #0000000f;
                     }
                     .item {
                         padding: 5px 15px;
@@ -244,7 +251,7 @@ a:focus-visible, button:focus-visible {
                         margin-bottom: 5px;
                         color: #727272;
                         line-height: 14px;
-                        background-color: #F3F3F3;
+                        background-color: #f3f3f3;
 
                         &:hover {
                             color: var(--text-color);
@@ -266,10 +273,498 @@ a:focus-visible, button:focus-visible {
     }
 }
 
+/* 알림 */
+
+/* 팝업 애니메이션 */
+@keyframes slidein {
+    from {
+        transition-delay: 0.1s;
+        transform: translateX(100%);
+    }
+
+    to {
+        transition-delay: 0.1s;
+        transform: translateX(0%);
+    }
+}
+
+.alarm-layer-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+
+    /* 폰트 */
+    * {
+        font-family: var(--ds-font-family-1);
+    }
+
+    /* 팝업 사이즈 */
+    .popup-box {
+        background-color: white;
+        border-radius: 16px 0 0 16px;
+        overflow: hidden;
+        position: relative;
+        width: 389px;
+        padding: 20px 10px 20px 20px;
+        display: none;
+    }
+
+    /* 팝업 열렸을 때 */
+    &.is-open {
+        display: flex;
+
+        .popup-box {
+            display: flex;
+            flex-direction: column;
+            animation-duration: 0.3s;
+            animation-name: slidein;
+        }
+    }
+
+    /* 사용자 프로필 */
+    .profile-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        line-height: 1;
+        margin: 21px 10px 0 43px;
+
+        /* 회사/부서명 */
+        .org-info {
+            display: flex;
+            font-size: 14px;
+            font-weight: 300;
+            color: #000;
+            word-break: break-all;
+            flex-wrap: wrap;
+        }
+
+        /* 사용자명 */
+        .person-name {
+            font-weight: 600;
+            font-size: 22px;
+            margin-top: 9px;
+        }
+    }
+
+    /* 알림/즐겨찾기 탭 */
+    .main-tab-area {
+        display: flex;
+        /* margin-top: 27px;
+        margin-bottom: 12px;
+        margin-right: 10px; */
+        margin: 27px 10px 12px;
+        border-bottom: 1px solid #cdc9c9;
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            flex: 1;
+            padding-bottom: 10px;
+            color: #acacac;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: -1px;
+            border-bottom: 2px solid transparent;
+
+            .tab-icon {
+                line-height: 14px;
+            }
+
+            .tab-text {
+                font-size: 16px;
+                color: inherit;
+                line-height: 19px;
+            }
+
+            .tab-count {
+                font-size: 19px;
+                line-height: 19px;
+                font-family: "Montserrat";
+            }
+
+            /* 활성화 */
+            &.active {
+                border-bottom-color: #222222;
+
+                .tab-icon {
+                    svg path {
+                        fill: #ffe2a9;
+                        stroke: #f17d00;
+                    }
+                }
+
+                .tab-text {
+                    font-size: 16px;
+                    color: #222222;
+                }
+
+                .tab-count {
+                    color: #f17d00;
+                }
+            }
+        }
+    }
+
+    /* 탭 영역 높이 */
+    .tab-content-area {
+        min-height: calc(100% - 800px);
+        flex: 1;
+    }
+
+    /* 탭 내용 */
+    .tab-content {
+        height: 100%;
+        display: none;
+
+        /* 활성화 */
+        &.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 공통 */
+        /* 목록 */
+        .list-area {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            overflow: hidden;
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+            padding-left: 10px;
+            padding-right: 5px;
+            height: 100%;
+
+            /* 스크롤 */
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #e5e5e5;
+                border-radius: 20px;
+            }
+
+            .item {
+                border-radius: 8px;
+                padding: 14px 12px 12px;
+                border: 1px solid #dddddd;
+            }
+
+            .con-title {
+                font-size: 15px;
+                color: #222222;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .etc {
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                margin-top: 13px;
+
+                p {
+                    color: #727272;
+                    font-size: 14px;
+                    margin: 0;
+                }
+
+                .btn {
+                    display: flex;
+                    gap: 4px;
+                }
+            }
+
+            /* 데이터 없을 때 */
+            .no-notify {
+                position: relative;
+                margin: 25px auto 27px;
+                width: fit-content;
+                padding-left: 46px;
+                display: flex;
+                justify-content: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url(../../img/alarm/alarm_non_icon.svg)
+                        center/cover no-repeat;
+                    width: 39px;
+                    height: 39px;
+                }
+            }
+        }
+
+        /* 검색 및 버튼 */
+        .util-area {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 6px;
+            margin: 0 10px 10px;
+
+            /* 검색 */
+            .search {
+                position: relative;
+                flex: 1;
+
+                input {
+                    border: 1px solid #e3e3e3;
+                    background: #f2f2f2;
+                    outline: none;
+                    transition: 0.1s;
+                    border-radius: 6px;
+                    height: 32px;
+                    line-height: 32px;
+                    padding: 0 8px 0 12px;
+                    width: 100%;
+
+                    &::placeholder {
+                        padding-left: 4px;
+                        color: #666666;
+                    }
+
+                    &:focus,
+                    &:hover {
+                        border-color: #222222;
+                        background: #fff;
+                    }
+                }
+
+                /* 검색 버튼 */
+                .search-btn {
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    line-height: 1;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-right: 10px;
+                }
+            }
+
+            /* 관리자 페이지 이동 버튼 */
+            .link-btn {
+                border: 1px solid #d7d7d7;
+                border-radius: 4px;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.1s;
+
+                &:hover,
+                &:focus {
+                    border-color: #222222;
+                }
+            }
+        }
+
+        /* 카테고리 칩 공통 스타일 */
+        .category-item {
+            border: 1px solid transparent;
+            padding: 0 6px;
+            font-weight: 600;
+            font-size: 12px;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 5px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            margin-bottom: 8px;
+            min-width: 46px;
+
+            /* 아이콘 */
+            .icon {
+                font-size: 0;
+                line-height: 1;
+            }
+
+            /* 텍스트 */
+            .text {
+                max-width: 105px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: inherit;
+            }
+
+            /* 즐겨찾기 칩 */
+            /* 테이블  */
+            &.green {
+                color: #1f8b24;
+                border-color: #b5d8ce;
+                background-color: #ecfdf3;
+            }
+
+            /* 단어 */
+            &.blue {
+                color: #0f56b3;
+                border-color: #b9cce6;
+                background-color: #eff8ff;
+            }
+
+            /* 컬럼 */
+            &.purple {
+                color: #6d46c8;
+                border-color: #e9d7fe;
+                background-color: #f9f5ff;
+            }
+
+            /* 용어 */
+            &.yellow {
+                color: #bf710f;
+                border-color: #f4ca65;
+                background-color: #fcf1e3;
+            }
+
+            /* 통합검색 */
+            &.search {
+                color: #a1690b;
+                border-color: #edd4ab;
+                background-color: #fef1dc;
+            }
+
+            /* 메뉴 */
+            &.menu {
+                color: #763449;
+                border-color: #f2d4de;
+                background-color: #faf1f6;
+            }
+
+            /* 카탈로그 */
+            &.catalog {
+                color: #2a4971;
+                border-color: #c5d8e8;
+                background-color: #ecf4fb;
+            }
+
+            /* 알림 칩 */
+            /* 결재요청 */
+            &.blue {
+                border: 1px solid #8aabd6;
+                color: #0a4197;
+                background-color: #e1eaf6;
+            }
+
+            /* 결재완료 */
+            &.black {
+                border: 1px solid #171717;
+                color: white;
+                background-color: #404040;
+            }
+        }
+
+        /* 즐겨찾기 특성화 */
+        &.favorite {
+            .list-area .item {
+                background-color: #ffffff;
+            }
+        }
+
+        /* 알림 특성화 */
+        &.alarm {
+            .list-area .item {
+                background-color: #f4f4f4;
+            }
+
+            /* 알림 - 결재, 요청, 완료 탭 */
+            .sub-tab {
+                display: flex;
+                margin: 0 10px 14px;
+
+                button {
+                    flex: 1;
+                    color: #222222;
+                    font-size: 14px;
+                    cursor: pointer;
+                    border: 1px solid #dddddd;
+                    height: 32px;
+                    line-height: 32px;
+                    position: relative;
+                    margin-left: -1px;
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        color: #727272;
+                        margin-left: 4px;
+                    }
+
+                    &:hover {
+                        background-color: #f4f4f4;
+                    }
+
+                    &.active {
+                        color: white;
+                        background-color: #444444;
+                        border-color: #444444;
+
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            /* 칩 */
+            .category-item {
+                font-size: 13px;
+                font-weight: 400;
+                border-radius: 50px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    /* 닫기 버튼 */
+    .popup-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+}
+
 /* 사이드메뉴 */
 .sidemenu-wrapper {
     width: 16%;
-    border-right: 1px solid #DEDEDE;
+    border-right: 1px solid #dedede;
     transition: width 0.25s;
     max-width: 250px;
     height: 100%;
@@ -278,7 +773,7 @@ a:focus-visible, button:focus-visible {
     padding-right: clamp(11px, 1vw, 16px);
     padding-left: clamp(18px, 1vw, 26px);
     padding-bottom: 20px;
-    
+
     /* 상단 타이틀 및 토클 버튼 */
     .sm-header {
         display: flex;
@@ -300,7 +795,7 @@ a:focus-visible, button:focus-visible {
             position: relative;
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 10px;
                 top: 50%;
@@ -313,7 +808,8 @@ a:focus-visible, button:focus-visible {
         }
 
         .menu-toggle-btn {
-            background: url(../img/sideMenu/sidemenu_hide_btn.svg) center/cover no-repeat;
+            background: url(../img/sideMenu/sidemenu_hide_btn.svg) center/cover
+                no-repeat;
             width: 25px;
             height: 23px;
             transition: background 0.1s;
@@ -341,7 +837,7 @@ a:focus-visible, button:focus-visible {
             position: relative;
 
             /* 메뉴 아이콘 */
-            .icon{
+            .icon {
                 position: absolute;
                 top: 8px;
                 left: 16px;
@@ -354,7 +850,7 @@ a:focus-visible, button:focus-visible {
                 align-items: center;
                 height: 36px;
                 line-height: 36px;
-                border: 1px solid #E9E9E9;
+                border: 1px solid #e9e9e9;
                 border-radius: 8px;
                 padding: 0 15px 0 42px;
                 transition: background 0.1s;
@@ -362,9 +858,9 @@ a:focus-visible, button:focus-visible {
                 font-size: 14px;
 
                 &:hover {
-                    background-color: #EFEFEF;
+                    background-color: #efefef;
                     font-weight: 500;
-                    border-color: #E9E9E9;
+                    border-color: #e9e9e9;
                 }
 
                 .arrow {
@@ -390,13 +886,13 @@ a:focus-visible, button:focus-visible {
 
                 /* 메뉴 활성화 */
                 &.active {
-                    background-color: #F0F0F0;
-                    border-color: #DDDDDD;
+                    background-color: #f0f0f0;
+                    border-color: #dddddd;
                     font-weight: 500;
                 }
 
                 /* 메뉴 클릭 시 */
-                &.on .arrow{
+                &.on .arrow {
                     transform: rotate(180deg);
                 }
             }
@@ -411,20 +907,20 @@ a:focus-visible, button:focus-visible {
                 padding-left: 12px;
                 position: relative;
                 display: none;
-    
+
                 &.active {
                     display: block;
                 }
-    
+
                 &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     left: 0;
                     top: 0;
                     height: calc(100% - 17px);
                     border-left: 2px solid #d5d5d591;
                 }
-    
+
                 a {
                     display: flex;
                     align-items: center;
@@ -436,34 +932,35 @@ a:focus-visible, button:focus-visible {
                     -moz-osx-font-smoothing: grayscale;
                     text-rendering: optimizeLegibility;
                     word-break: keep-all;
-    
+
                     &::before {
-                        content: '';
+                        content: "";
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
                         right: calc(100% - 0.75px);
-                        background: url(../img/sideMenu/curved_line.svg) center/cover no-repeat;
+                        background: url(../img/sideMenu/curved_line.svg)
+                            center/cover no-repeat;
                         width: 13px;
                         height: 14px;
                     }
-    
+
                     &:hover {
-                        background-color: #F6F7F8;
+                        background-color: #f6f7f8;
                         color: var(--text-color);
                         font-weight: 600;
 
                         .sub-arrow svg path {
-                            fill: #E98417;
+                            fill: #e98417;
                         }
                     }
-    
+
                     .sub-text {
                         flex: 1;
                         font-size: 14px;
                         color: var(--text-color);
                     }
-    
+
                     &:after {
                         content: attr(title);
                         font-weight: 600;
@@ -472,22 +969,21 @@ a:focus-visible, button:focus-visible {
                         height: 0;
                         overflow: hidden;
                     }
-    
+
                     .sub-arrow {
                         font-size: 0;
                         transform: translateY(2px);
                     }
                     /* lnb 활성화 */
-                    &.active{
-                        background-color: #FDF2EA;
+                    &.active {
+                        background-color: #fdf2ea;
                         font-weight: 500;
 
                         .sub-arrow svg path {
-                            fill: #E98417;
+                            fill: #e98417;
                         }
                     }
                 }
-
             }
         }
     }
@@ -496,7 +992,7 @@ a:focus-visible, button:focus-visible {
     &.folded {
         width: 57px;
         padding: 16px 10px 16px;
-        background-color: #EDEDED;
+        background-color: #ededed;
         overflow-y: visible;
 
         /* 상단 타이틀 및 토클 버튼 */
@@ -531,10 +1027,10 @@ a:focus-visible, button:focus-visible {
                     border-radius: 10px;
 
                     &:hover {
-                        background-color: #DFDFDF;
+                        background-color: #dfdfdf;
                     }
                 }
-                
+
                 .sm-item {
                     position: absolute;
                     top: 2px;
@@ -544,9 +1040,9 @@ a:focus-visible, button:focus-visible {
                     z-index: 1;
                     background-color: #fff;
                     gap: 4px;
-                    border: 1px solid #E1E1E1;
+                    border: 1px solid #e1e1e1;
                     border-radius: 7px;
-                    box-shadow: 3.32px 3.32px 6.64px 0px #0000001F;
+                    box-shadow: 3.32px 3.32px 6.64px 0px #0000001f;
                     display: none;
                 }
 
@@ -569,7 +1065,7 @@ a:focus-visible, button:focus-visible {
                         background-color: var(--text-color);
                         border: 1px solid #000000;
                         margin: -1px;
-                        
+
                         .text {
                             color: #fff;
                             font-weight: 500;
@@ -583,7 +1079,7 @@ a:focus-visible, button:focus-visible {
                     /* 서브 메뉴 있는 메뉴 */
                     &:not(.none-sub-menu) {
                         .text {
-                            border-bottom: 1px solid #E0E0E0;
+                            border-bottom: 1px solid #e0e0e0;
                             padding-right: 4px;
                             padding-top: 14px;
                             padding-bottom: 6px;
@@ -636,36 +1132,36 @@ a:focus-visible, button:focus-visible {
                     min-width: 134px;
                     gap: 1px;
                     padding: 7px 12px 9px;
-            
+
                     &::before {
                         content: none;
                     }
-            
+
                     .text {
                         font-size: 13px;
-                        border-bottom: 1px solid #E0E0E0;
+                        border-bottom: 1px solid #e0e0e0;
                         padding-bottom: 10px;
                         text-align: center;
                         margin-bottom: 3px;
                     }
-            
+
                     a {
                         padding: 6px 0 6px 4px;
                         border-radius: 5px;
                         color: var(--text-color);
-            
+
                         &::before {
                             content: none;
                         }
-            
+
                         &:hover {
-                            background-color: #FDF2EA;
+                            background-color: #fdf2ea;
                         }
-            
+
                         .sub-text {
                             font-size: 14px;
                         }
-            
+
                         .sub-arrow {
                             display: none;
                         }
@@ -678,7 +1174,7 @@ a:focus-visible, button:focus-visible {
 
 /* 전체 레이아웃 - 추후 클래스명 변경 */
 .layout {
-    display: flex; 
+    display: flex;
     /* 컨텐츠 높이 */
     height: calc(100% - 50px);
 }
@@ -687,12 +1183,53 @@ a:focus-visible, button:focus-visible {
 .content-wrapper {
     flex: 1;
     overflow-y: auto;
-    
+
     .container {
         padding-top: clamp(4vh, 1vh, 7vh);
         padding-left: clamp(50px, 21vw, 80px);
         padding-right: clamp(50px, 21vw, 80px);
         max-width: 1450px;
         margin: 0 auto;
+    }
+}
+
+/* 공통 파일 보러가기 팝업 */
+.common-file-popup {
+    position: fixed;
+    top: 10vh;
+    right: 8vh;
+    background: white;
+    min-width: 185px;
+    height: 70px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px 0px #00000012;
+    border: 1px solid #ADE0D0;
+    overflow: hidden;
+
+    .popup-box {
+        padding: 24px;
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        height: 100%;
+        background: #EBFBF6;
+
+        a {
+            color: #039855;
+            font-weight: 500;
+            position: relative;
+            padding-right: 20px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 48%;
+                transform: translateY(-50%);
+                background: url(../img/commonfile/greenArrow.svg) center/cover no-repeat;
+                width: 11px;
+                height: 10px;
+            }
+        }
     }
 }

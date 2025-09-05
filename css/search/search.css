@@ -226,7 +226,7 @@ label.radio{
         border-bottom: 1px solid #ddd;
 
         th {
-            background-color: #f5f6f8;
+            background-color: #f1f2f3;
             text-align: left;
             font-weight: normal;
             vertical-align: middle;
@@ -347,9 +347,11 @@ label.radio{
 .search-section {
     display: flex;
     position: relative;
+    background: linear-gradient(180deg, #fff 0 31px, #e3e3e3 30px 32px, #f4f4f4 32px 100%);
     
     /* 필터 */
     .filter-container {
+        background-color: white;
         width: 245px;
         height: calc(100vh - 75px);
         position: sticky;
@@ -358,6 +360,8 @@ label.radio{
         margin-left: 16px;
         box-sizing: content-box;
         overflow: hidden;
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
 
         .filter-area{
             border: 1px solid #D8D8D8;
@@ -813,6 +817,7 @@ label.radio{
                         transition: 0.1s;
                         font-size: 16px;
                         font-weight: 400;
+                        background-color: white;
                         
                         &::placeholder {
                             color: #727272;
@@ -1227,6 +1232,7 @@ label.radio{
             padding-bottom: 15px;
 
             .result-item {
+                background-color: white;
                 border: 1.3px solid #CDCDCD;
                 border-radius: 10px;
                 padding: 18px 30px 18px 26px;
@@ -1392,7 +1398,7 @@ label.radio{
                         th {
                             padding: 7px 13px;
                             width: 9%;
-                            background-color: #f5f6f875;
+                            background-color: #f1f2f3;
                         }
                         th, td{
                             font-size: 13px;
@@ -1521,7 +1527,7 @@ label.radio{
         .page {
             position: sticky;
             bottom: 0;
-            background: white;
+            background: #f4f4f4;
         }
     }
 } 

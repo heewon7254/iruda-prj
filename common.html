@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>공통 스타일</title>
+        <!-- <link rel="stylesheet" href="../../css/index.css"> -->
+        <!-- 이 파일 정리를 위한 css - 참고 안하셔도 됩니다. -->
+        <link rel="stylesheet" href="css/reset/reset.css" />
+        <!-- Input css -->
+        <link rel="stylesheet" href="css/common/input.css" />
+        <!-- button css -->
+        <link rel="stylesheet" href="css/common/button.css" />
+        <!-- page css -->
+        <link rel="stylesheet" href="css/common/page.css" />
+        <!-- table css -->
+        <link rel="stylesheet" href="css/common/table.css" />
+        <!-- flex.css -->
+        <link rel="stylesheet" href="css/common/flex.css" />
+    </head>
+    <body>
+        <h1>IRUDA Common Style<span> v4.3</span></h1>
+        <section>
+            <h2>Font</h2>
+            <h3>기본 폰트 : Pretendard</h3>
+            <h3>(일부) 영문 및 숫자 : Montserrat</h3>
+        </section>
+        <section>
+            <h2>Input</h2>
+            <!-- input.css 참고 -->
+            <div class="content-area">
+                <div class="group">
+                    <h3>Checkbox(비활성화 추가, readonly 추가)</h3>
+                    <label for="checkbox-id" class="checkbox priㄴㄴmary">
+                        <input type="checkbox" id="checkbox-id" checked />
+                        <span class="checkbox-icon" role="presentation">
+                            <svg
+                                width="10"
+                                height="8"
+                                viewBox="0 0 10 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M1 4L3.6664 7L9 1"
+                                    stroke="white"
+                                    stroke-miterlimit="10"
+                                />
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">체크박스</span>
+                    </label>
+                </div>
+                <div class="group">
+                    <h3>Radio</h3>
+                    <div class="radio-set">
+                        <label for="radio-id" class="radio primary">
+                            <input
+                                type="radio"
+                                id="radio-id"
+                                name="radio"
+                                checked=""
+                            />
+                            <span class="radio-label">라디오</span>
+                        </label>
+                        <label for="radio-id" class="radio primary">
+                            <input
+                                type="radio"
+                                id="radio-id"
+                                name="radio"
+                                checked=""
+                            />
+                            <span class="radio-label">라디오</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="group">
+                    <h3>text</h3>
+                    <span>미정</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Button</h2>
+            <!-- button.css 참고 -->
+            <!-- theme -->
+            <div class="content-area">
+                <!-- 현재 나온 페이지 기준까지의 버튼 -->
+                <div class="group">
+                    <h3>큰 버튼</h3>
+                    <button class="ui-btn btn-lg primary">버튼</button>
+                    <button class="ui-btn btn-lg secondary">버튼</button>
+                </div>
+                <div class="group">
+                    <h3>중간 버튼</h3>
+                    <button class="ui-btn btn-m primary">버튼</button>
+                    <button class="ui-btn btn-m secondary">버튼</button>
+                </div>
+                <div class="group">
+                    <h3>작은 버튼</h3>
+                    <button class="ui-btn btn-sm primary">버튼</button>
+                    <button class="ui-btn btn-sm secondary">버튼</button>
+                    <button class="ui-btn btn-sm secondary">
+                        이동
+                        <svg
+                            width="3"
+                            height="5"
+                            viewBox="0 0 3 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M2.86674 2.81544L0.775626 4.86913C0.59795 5.04362 0.310934 5.04362 0.133258 4.86913C-0.0444188 4.69463 -0.0444188 4.41275 0.133258 4.23826L1.90091 2.49776L0.133257 0.761746C-0.044419 0.587249 -0.044419 0.30537 0.133257 0.130873C0.310934 -0.0436238 0.59795 -0.0436238 0.775626 0.130873L2.86674 2.18456C3.04442 2.35459 3.04442 2.64094 2.86674 2.81544Z"
+                                fill="#3E3E3E"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group">
+                    <h3>비활성 버튼</h3>
+                    <!-- class="disabled" 또는 disabled 추가 -->
+                    <button class="ui-btn btn-sm disabled" disabled>
+                        버튼
+                    </button>
+                </div>
+                <div class="group">
+                    <h3>글쓰기 버튼</h3>
+                    <button class="ui-btn btn-lg primary">
+                        <!-- 아이콘 있을 시 span="icon" 추가 -->
+                        <svg
+                            width="13"
+                            height="13"
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1 12L4.15814 10.7853C4.36014 10.7076 4.46114 10.6688 4.55563 10.6181C4.63957 10.573 4.71958 10.521 4.79484 10.4626C4.87957 10.3969 4.95609 10.3203 5.10913 10.1673L11.5285 3.74791C12.1572 3.11929 12.1572 2.10009 11.5285 1.47147C10.8999 0.842845 9.88072 0.842844 9.2521 1.47146L2.83269 7.89087C2.67966 8.0439 2.60314 8.12042 2.53739 8.20515C2.47899 8.28041 2.42699 8.36043 2.38193 8.44436C2.33121 8.53886 2.29236 8.63986 2.21467 8.84186L1 12ZM1 12L2.1713 8.95467C2.25511 8.73675 2.29702 8.62779 2.3689 8.57787C2.43172 8.53426 2.50945 8.51776 2.58457 8.53211C2.67053 8.54852 2.75307 8.63107 2.91817 8.79617L4.20384 10.0818C4.36894 10.2469 4.45149 10.3295 4.4679 10.4154C4.48225 10.4906 4.46575 10.5683 4.42214 10.6311C4.37223 10.703 4.26327 10.7449 4.04534 10.8287L1 12Z"
+                                stroke="white"
+                                stroke-width="1.2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            /></svg>글쓰기
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Pagination</h2>
+            <!-- 통합 검색 구조 참조 -> 커뮤니티 추후 변경 -->
+            <!-- <div class="page">
+            <a href="javascript:void(0)" class="first">
+                <span class="sr-only">첫 페이지로 이동</span>
+            </a>
+            <a href="javascript:void(0)" class="prev">
+                <span class="sr-only">이전 페이지 이동</span>
+            </a>
+            <a href="javascript:void(0)" class="active">1</a>
+            <a href="javascript:void(0)">2</a>
+            <a href="javascript:void(0)">3</a>
+            <a href="javascript:void(0)">4</a>
+            <a href="javascript:void(0)">5</a>
+            <a href="javascript:void(0)" class="next">
+                <span class="sr-only">다음 페이지 이동</span>
+            </a>
+            <a href="javascript:void(0)" class="last">
+                <span class="sr-only">마지막 페이지로 이동</span>
+            </a>
+            <label for="">
+                <select name="" id="">
+                    <option value="">10 / page</option>
+                    <option value="" selected>20 / page</option>
+                    <option value="">40 / page</option>
+                    <option value="">50 / page</option>
+                </select>
+            </label>
+        </div> -->
+            <!-- 기존 페이지네이션 구조 -->
+            <div class="page-container">
+                <!-- 페이지 버튼 -->
+                <!-- 삭제 -->
+                <!-- <div class="page-totalcount">
+                <span class="page-value">1-10 of 5,007 items</span>
+            </div> -->
+                <!-- 버튼 변경 -->
+                <!-- <i class="ui-button page page-disabled material-icons-outlined" style="font-size: 14px;">keyboard_double_arrow_left</i> -->
+                <!-- <i class="ui-button page page-disabled material-icons-outlined" style="font-size: 14px;">keyboard_arrow_left</i> -->
+                <!-- page-control 클래스명 추가 -->
+                <span class="ui-button page-control">
+                    <button>
+                        <svg
+                            width="9"
+                            height="8"
+                            viewBox="0 0 9 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M8 1L5 4L8 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                d="M4 1L1 4L4 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </span>
+                <!-- page-control 클래스명 추가 -->
+                <span class="ui-button page-control">
+                    <button>
+                        <svg
+                            width="6"
+                            height="8"
+                            viewBox="0 0 6 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 1L1 4L5 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </span>
+                <ul class="page-nav">
+                    <li class="ui-button page ui-state-active">
+                        <button>1</button>
+                    </li>
+                    <li class="ui-button page"><button>2</button></li>
+                    <li class="ui-button page"><button>3</button></li>
+                    <li class="ui-button page"><button>4</button></li>
+                    <li class="ui-button page"><button>5</button></li>
+                    <li class="ui-button page"><button>6</button></li>
+                    <li class="ui-button page"><button>7</button></li>
+                    <li class="ui-button page"><button>8</button></li>
+                    <li class="ui-button page"><button>9</button></li>
+                    <li class="ui-button page"><button>10</button></li>
+                </ul>
+                <!-- .. / 마지막 페이지랑 태그 분리 -->
+                <span>..</span>
+                <!-- 버튼 태그 추가 -->
+                <span class="ui-button page last-page">
+                    <button>501</button>
+                </span>
+                <!-- <i class="ui-button page false material-icons-outlined" style="font-size: 14px;">keyboard_arrow_right</i> -->
+                <!-- <i class="ui-button page false material-icons-outlined" style="font-size: 14px;">keyboard_double_arrow_right</i> -->
+                <!-- page-control 클래스명 추가 -->
+                <span class="ui-button page-control">
+                    <button>
+                        <svg
+                            width="6"
+                            height="8"
+                            viewBox="0 0 6 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1 1L5 4L1 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </span>
+                <!-- page-control 클래스명 추가 -->
+                <span class="ui-button page-control">
+                    <button>
+                        <svg
+                            width="9"
+                            height="8"
+                            viewBox="0 0 9 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1 1L4 4L1 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                d="M5 1L8 4L5 7"
+                                stroke="#222222"
+                                stroke-width="0.795122"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </span>
+                <!-- 페이지 크기 -->
+                <div
+                    class="page-size-selection ui-widget pagination-rows-per-page-area"
+                >
+                    <!-- 삭제 -->
+                    <!-- <span class="page-label">페이지 크기</span> -->
+                    <!-- label 태그 추가 / for 속성 및 select id 추가 필수 -->
+                    <label for="">
+                        <select
+                            class="shadow-input ds-select page-value rows-per-page"
+                        >
+                            <option value="10">10 / page</option>
+                            <option value="30">30 / page</option>
+                            <option value="50">50 / page</option>
+                            <option value="100">100 / page</option>
+                            <option value="200">200 / page</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <h3>목록형 테이블</h3>
+            <table class="row_table">
+                <!-- 접근성 준수 태그 -->
+                <caption>
+                    테이블에 대한 설명 추가
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">작성일</th>
+                        <th scope="col">조회</th>
+                        <th scope="col">첨부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="textOverflow">
+                                <span class="icon">공지</span>
+                                <span class="text">
+                                    <span
+                                        >제목입니다.제목입니다.제목입니다.</span
+                                    >
+                                </span>
+                                <span class="icon">목록</span>
+                            </div>
+                        </td>
+                        <td>작성자명</td>
+                        <td>2024-12-25</td>
+                        <td>99999</td>
+                        <td>파일</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>폼 테이블</h3>
+            <table class="col_table">
+                <!-- 접근성 준수 태그 -->
+                <caption>
+                    테이블에 대한 설명 추가
+                </caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">제목</th>
+                        <td>
+                            <label for="id_01">
+                                <input type="text" id="id_01" />
+                            </label>
+                        </td>
+                        <th scope="row">작성자</th>
+                        <td>
+                            <label for="id_02">
+                                <input type="text" id="id_02" />
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">작성일시</th>
+                        <td colspan="3">2024-12-25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">첨부파일</th>
+                        <td colspan="3">
+                            <div class="file_list">파일목록1,2,3</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Select</h2>
+            <span>미정</span>
+            <!-- page.css / line : 77 추후 수정 -->
+        </section>
+        <section>
+            <h2>팝업</h2>
+        </section>
+        <!-- commonui-react > sass > default > _default.scss 일부 추가되어 있음 -->
+        <section>
+            <h2>Flex</h2>
+            <h3>가로배치</h3>
+            <div class="flex-container dir-row" style="gap: 12px">
+                <div class="flex-box">box</div>
+                <div class="flex-box">box</div>
+            </div>
+            <h3>세로배치</h3>
+            <div class="flex-container dir-col" style="gap: 12px">
+                <div class="flex-box">box</div>
+                <div class="flex-box">box</div>
+            </div>
+            <h3>양끝배치</h3>
+            <div class="flex-container">
+                <div class="flex-between">
+                    <div class="flex-start" style="gap: 12px">
+                        <div class="flex-box">box</div>
+                        <div class="flex-box">box</div>
+                    </div>
+                    <div class="flex-end" style="gap: 12px">
+                        <div class="flex-box">box</div>
+                        <div class="flex-box">box</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>접근성</h2>
+            <h3>버튼</h3>
+            <ul class="reset-list">
+                <li>- icon: 아이콘 요소 (선택사항)</li>
+                <li>- label: 텍스트 (선택사항)</li>
+                <li>
+                    - ariaLabel: 아이콘만 있는 버튼의 접근성을 위한 속성 추가
+                </li>
+                <li>- sr-only: 아이콘만 있는 버튼의 접근성을 위한 태그 추가</li>
+            </ul>
+            <!-- 
+            aria-label 속성은 버튼에 텍스트가 없을 때만 적용됩니다. 
+            아이콘이 있을 때 aria-label을 사용하여 스크린 리더에서 버튼의 의미를 전달할 수 있습니다. 
+        -->
+
+            <!-- 
+        const Button = ({ icon, label, ariaLabel }) => {
+            const hasLabel = !!label; // 텍스트 여부
+        
+            return (
+                <button
+                    className="ui-btn"
+                    {...(hasLabel ? {} : { "aria-label": ariaLabel })} // hasLabel이 true면 aria-label 속성 자체를 없앰
+                >
+                    {icon && <Icon ariaHidden={hasLabel} />}
+                    {label && <span>{label}</span>}
+                </button>
+            );
+        };
+        
+        const Icon = ({ ariaHidden }) => (
+            <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                aria-hidden={ariaHidden} // 버튼이 직접 설정한 값 적용
+            >
+                <path d="..." />
+            </svg>
+        ); -->
+
+            <!-- 
+            sr-only 태그는 버튼에 텍스트가 없을 때만 적용됩니다. 
+            아이콘이 있을 때 sr-only 태그를 사용하여 스크린 리더에서 버튼의 의미를 전달할 수 있습니다. 
+        -->
+
+            <!-- 
+        const Button = ({ icon, label, ariaLabel }) => {
+            const hasLabel = !!label; // 텍스트 여부
+        
+            return (
+                <button className="ui-btn">
+                    {icon && <Icon ariaHidden={hasLabel} />}
+                    {label ? (
+                        <span>{label}</span> // 일반적인 버튼 텍스트
+                    ) : (
+                        <span className="sr-only">{ariaLabel}</span> // 스크린 리더 전용 텍스트
+                    )}
+                </button>
+            );
+        };
+        
+        const Icon = ({ ariaHidden }) => (
+            <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                aria-hidden={ariaHidden} // 버튼이 직접 설정한 값 적용
+            >
+                <path d="..." />
+            </svg>
+        ); -->
+
+            <h3>포커스</h3>
+            <ul class="reset-list">
+                <li>
+                    - `focus-visible`은 사용자가 키보드로 포커스를 이동할 때만
+                    표시됩니다.
+                </li>
+                <li>
+                    - 마우스로 클릭하면 `outline`이 표시되지 않으며, 키보드로
+                    포커스를 이동한 경우에만 `outline`이 보이게 됩니다.
+                </li>
+                <li>
+                    - 이 스타일은 사용자의 접근성을 돕기 위해 포커스를
+                    시각적으로 표시합니다.
+                </li>
+            </ul>
+            <div style="background-color: rgb(255 246 231); padding: 20px">
+                &:focus-visible { outline: 1px solid black; }
+            </div>
+        </section>
+        <!-- openwax, w3c 검사 -->
+    </body>
+</html>
