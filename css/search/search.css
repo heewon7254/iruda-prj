@@ -565,6 +565,17 @@ label.radio{
                 margin-right: 2px;
                 margin-bottom: 18px;
                 flex: 1;
+                &::-webkit-scrollbar {
+                    width: 7px;
+                    height: 7px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: transparent
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 8px;
+                    background-color: #e0e0e0;
+                }
 
                 /* 필터 목록 타이틀 */
                 .filter-con-title {
